@@ -1,0 +1,67 @@
+/*у меня есть одно замечание :-(
+когда провожу по цифрам слева - выводится подсветка правого квадратика.
+Проверил Плугатарёв Д.В. (спасибо, исправила)
+Соболева Т.С. 
+
+  */
+body {
+  background-color: #66CDAA;
+}
+h1 {
+  margin-left: 50px;
+  color: #0000EE;
+}
+h3 {
+  color: #8B7765;
+}
+h3 + table {
+  margin: 50px 100px;
+}
+table {
+  padding: 2px;
+  margin-top: 20px;
+  margin-left: 50px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  border: 2px solid #CD5C5C;
+  border-collapse: collapse;
+/*border-top: hidden;
+border-right: hidden;
+border-left: hidden;
+border-bottom: hidden;*/
+}
+td > h3 {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 16px;
+  color: #0000EE;
+}
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+  background:#000;
+  height: 50px;
+  width: 50px;
+}
+tr:nth-child(even) td:nth-child(even),
+tr:nth-child(odd) td:nth-child(odd) {
+  background: #fff;
+}
+#chess1 tr>td:first-child,
+#chess1 tr>td:last-child,
+#chess1 tr:last-child>td,
+#chess1 tr:first-child>td,
+#chess2 tr>td:first-child,
+#chess2 tr>td:last-child,
+#chess2 tr:last-child>td,
+#chess2 tr:first-child>td {
+  background-color: #B9D3EE;
+}
+tr:nth-child(1n+2)>td:hover {
+  background: #FFFF00;
+}
+table+table tr:nth-child(1n+2)>td:hover {
+  background: #EEB422;
+}
+tr:nth-child(1n+2)>td:nth-child(1n+2):hover+td {
+  background: #1E90FF;
+}
